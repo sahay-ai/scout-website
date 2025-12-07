@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, LogIn, Aperture } from 'lucide-react';
 
 interface NavbarProps {
-  currentPage: 'home' | 'careers';
-  onNavigate: (page: 'home' | 'careers') => void;
+  currentPage: string;
+  onNavigate: (page: any) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
@@ -51,11 +51,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { name: 'Careers', href: '#careers' },
   ];
 
+  const isHome = currentPage === 'home';
+
   return (
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled || currentPage === 'careers' || isMobileMenuOpen
+          isScrolled || !isHome || isMobileMenuOpen
             ? 'bg-scout-dark/90 backdrop-blur-md border-b border-white/10 py-4' 
             : 'bg-transparent py-6'
         }`}

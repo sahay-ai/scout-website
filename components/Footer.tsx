@@ -1,8 +1,9 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter, MapPin, Aperture } from 'lucide-react';
+import { Page } from '../App';
 
 interface FooterProps {
-    onNavigate?: (page: 'home' | 'careers') => void;
+    onNavigate: (page: Page) => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
@@ -13,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="col-span-1 md:col-span-2">
             
             {/* LOGO SECTION - EDIT HERE TO REPLACE LOGO */}
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={() => onNavigate('home')}>
                 {/* OPTION 1: IMAGE LOGO (Uncomment the line below and add your image path) */}
                 {/* <img src="/path/to/your/logo.png" alt="Scout Robotics Logo" className="h-8 md:h-10 w-auto" /> */}
 
@@ -46,19 +47,18 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Platform</h4>
             <ul className="space-y-4">
-                <li><button onClick={() => onNavigate?.('home')} className="hover:text-scout-primary transition-colors text-left">Automated Inspection</button></li>
-                <li><button onClick={() => onNavigate?.('home')} className="hover:text-scout-primary transition-colors text-left">Edge AI Software</button></li>
-                <li><button onClick={() => onNavigate?.('home')} className="hover:text-scout-primary transition-colors text-left">Cloud Dashboard</button></li>
-                <li><a href="#" className="hover:text-scout-primary transition-colors">API Documentation</a></li>
+                <li><button onClick={() => { onNavigate('inspection'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">Automated Inspection</button></li>
+                <li><button onClick={() => { onNavigate('edge'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">Edge AI Software</button></li>
+                <li><button onClick={() => { onNavigate('dashboard'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">Cloud Dashboard</button></li>
+                <li><button onClick={() => { onNavigate('api'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">API Documentation</button></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Company</h4>
             <ul className="space-y-4">
-                <li><a href="#" className="hover:text-scout-primary transition-colors">About Us</a></li>
-                <li><button onClick={() => onNavigate?.('careers')} className="hover:text-scout-primary transition-colors text-left">Careers</button></li>
-                <li><a href="#" className="hover:text-scout-primary transition-colors">Press Kit</a></li>
+                <li><button onClick={() => { onNavigate('about'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">About Us</button></li>
+                <li><button onClick={() => { onNavigate('careers'); window.scrollTo(0,0); }} className="hover:text-scout-primary transition-colors text-left">Careers</button></li>
                 <li className="flex items-center gap-2 pt-4 text-slate-500">
                     <MapPin size={14} />
                     <span>Philadelphia, PA</span>
@@ -70,9 +70,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
             <p>&copy; {new Date().getFullYear()} Scout Robotics Inc. All rights reserved.</p>
             <div className="flex gap-8 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white">Privacy Policy</a>
-                <a href="#" className="hover:text-white">Terms of Service</a>
-                <a href="#" className="hover:text-white">Security</a>
+                <button onClick={() => { onNavigate('privacy'); window.scrollTo(0,0); }} className="hover:text-white">Privacy Policy</button>
+                <button onClick={() => { onNavigate('terms'); window.scrollTo(0,0); }} className="hover:text-white">Terms of Service</button>
+                <button onClick={() => { onNavigate('security'); window.scrollTo(0,0); }} className="hover:text-white">Security</button>
             </div>
         </div>
       </div>

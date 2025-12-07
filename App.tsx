@@ -10,17 +10,41 @@ import News from './components/News';
 import Careers from './components/Careers';
 import Footer from './components/Footer';
 
-type Page = 'home' | 'careers';
+// Sub-pages
+import { PrivacyPolicy, TermsOfService, Security } from './components/Legal';
+import { AboutUs } from './components/Company';
+import { APIDocs } from './components/Documentation';
+import { AutomatedInspection, EdgeSoftware, CloudDashboard } from './components/Solutions';
+
+export type Page = 
+  | 'home' 
+  | 'careers' 
+  | 'about' 
+  | 'privacy' 
+  | 'terms' 
+  | 'security' 
+  | 'api' 
+  | 'inspection' 
+  | 'edge' 
+  | 'dashboard';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
-  return (
-    <div className="min-h-screen bg-scout-dark text-white selection:bg-scout-primary selection:text-white font-sans">
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
-      
-      <main>
-        {currentPage === 'home' ? (
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'careers': return <Careers />;
+      case 'privacy': return <PrivacyPolicy />;
+      case 'terms': return <TermsOfService />;
+      case 'security': return <Security />;
+      case 'about': return <AboutUs />;
+      case 'api': return <APIDocs />;
+      case 'inspection': return <AutomatedInspection />;
+      case 'edge': return <EdgeSoftware />;
+      case 'dashboard': return <CloudDashboard />;
+      case 'home':
+      default:
+        return (
           <>
             <Hero />
             
@@ -63,9 +87,16 @@ function App() {
                </div>
             </section>
           </>
-        ) : (
-          <Careers />
-        )}
+        );
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-scout-dark text-white selection:bg-scout-primary selection:text-white font-sans">
+      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+      
+      <main>
+        {renderPage()}
       </main>
       
       <Footer onNavigate={setCurrentPage} />
