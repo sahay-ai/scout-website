@@ -44,9 +44,12 @@ const SolutionLayout: React.FC<{
                                     </li>
                                 ))}
                             </ul>
-                            <button className="w-full mt-8 bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-colors">
+                            <a 
+                                href="mailto:contact@scoutrobo.com?subject=Request for Spec Sheet" 
+                                className="block w-full mt-8 bg-scout-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-colors text-center"
+                            >
                                 Request Spec Sheet
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -70,10 +73,6 @@ export const AutomatedInspection: React.FC = () => (
         <p>
             Scout Robotics changes the paradigm by mounting autonomous sensor pods on your existing fleet. Every time a train runs, it inspects the track. This provides a daily health check of your entire network, allowing you to catch defects the moment they form.
         </p>
-        <div className="my-8 grid grid-cols-2 gap-4">
-            <img src={SOLUTION_IMAGES.SOLUTION_1} className="rounded-lg opacity-80" />
-            <img src={SOLUTION_IMAGES.SOLUTION_2} className="rounded-lg opacity-80" />
-        </div>
     </SolutionLayout>
 );
 

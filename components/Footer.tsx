@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Twitter, MapPin } from 'lucide-react';
+import { Mail, Linkedin, MapPin } from 'lucide-react';
 import { Page } from '../App';
 import { LOGO_PATH } from '../src/constants/images';
 
@@ -26,13 +26,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Scout Robotics is an infrastructure autonomy company. We build the hardware and software that enables industrial networks to inspect themselves.
             </p>
             <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+                <a href="https://www.linkedin.com/company/scout-robotics/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
                     <Linkedin size={18} />
                 </a>
-                <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
-                    <Twitter size={18} />
-                </a>
-                <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+                <a href="mailto:contact@scoutrobo.com" className="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
                     <Mail size={18} />
                 </a>
             </div>

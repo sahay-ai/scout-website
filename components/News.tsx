@@ -1,6 +1,11 @@
 import React from 'react';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { NEWS_IMAGES } from '../src/constants/images';
+import { Page } from '../App';
+
+interface NewsProps {
+  onNavigate: (page: Page) => void;
+}
 
 const newsItems = [
   {
@@ -26,7 +31,7 @@ const newsItems = [
   }
 ];
 
-const News: React.FC = () => {
+const News: React.FC<NewsProps> = ({ onNavigate }) => {
   return (
     <section id="news" className="py-24 bg-black border-t border-white/10">
       <div className="container mx-auto px-6">
@@ -35,7 +40,10 @@ const News: React.FC = () => {
              <span className="text-scout-primary font-mono text-xs tracking-widest uppercase mb-2 block">Newsroom</span>
              <h2 className="text-3xl md:text-5xl font-bold text-white">Latest Updates</h2>
            </div>
-           <button className="hidden md:flex items-center gap-2 text-white font-bold hover:text-scout-primary transition-colors">
+           <button 
+             onClick={() => { onNavigate('news'); window.scrollTo(0, 0); }}
+             className="hidden md:flex items-center gap-2 text-white font-bold hover:text-scout-primary transition-colors"
+           >
               VIEW ALL NEWS <ArrowRight className="w-4 h-4" />
            </button>
         </div>
@@ -75,7 +83,10 @@ const News: React.FC = () => {
         </div>
         
         <div className="md:hidden mt-12 text-center">
-            <button className="inline-flex items-center gap-2 text-white font-bold border border-white/20 px-6 py-3 rounded hover:bg-white/10">
+            <button 
+              onClick={() => { onNavigate('news'); window.scrollTo(0, 0); }}
+              className="inline-flex items-center gap-2 text-white font-bold border border-white/20 px-6 py-3 rounded hover:bg-white/10"
+            >
               VIEW ALL NEWS <ArrowRight className="w-4 h-4" />
            </button>
         </div>

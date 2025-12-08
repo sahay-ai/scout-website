@@ -60,9 +60,9 @@ export const FEATURE_IMAGES = {
 
 // Solutions Section
 export const SOLUTION_IMAGES = {
-  SOLUTION_BG_1: '/images/solutions/solution-bg-1.jpg',
-  SOLUTION_BG_2: '/images/solutions/solution-bg-2.jpg',
-  SOLUTION_BG_3: '/images/solutions/solution-bg-3.jpg',
+  SOLUTION_BG_1: '/images/solutions/solution-bg-1.png',
+  SOLUTION_BG_2: '/images/solutions/solution-bg-2.png',
+  SOLUTION_BG_3: '/images/solutions/solution-bg-3.png',
   SOLUTION_1: '/images/solutions/solution-1.jpg',
   SOLUTION_2: '/images/solutions/solution-2.jpg',
 } as const;

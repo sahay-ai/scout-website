@@ -7,6 +7,7 @@ import Features from './components/Features';
 import SystemArchitecture from './components/ProductDeepDive';
 import Technology from './components/Technology';
 import News from './components/News';
+import NewsPage from './components/NewsPage';
 import Careers from './components/Careers';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ import { AutomatedInspection, EdgeSoftware, CloudDashboard } from './components/
 export type Page = 
   | 'home' 
   | 'careers' 
+  | 'news'
   | 'about' 
   | 'privacy' 
   | 'terms' 
@@ -34,6 +36,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'careers': return <Careers />;
+      case 'news': return <NewsPage onNavigate={setCurrentPage} />;
       case 'privacy': return <PrivacyPolicy />;
       case 'terms': return <TermsOfService />;
       case 'security': return <Security />;
@@ -66,7 +69,7 @@ function App() {
             <IndustryFocus />
             <Features />
             <SystemArchitecture />
-            <News />
+            <News onNavigate={setCurrentPage} />
             
             {/* CTA Section */}
             <section className="py-32 bg-scout-dark relative overflow-hidden">
