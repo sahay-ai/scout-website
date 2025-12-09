@@ -1,6 +1,6 @@
 import React from 'react';
 import { IndustryType, Industry } from '../types';
-import { Train, Truck, Plane, Building2, ChevronRight } from 'lucide-react';
+import { Train, Truck, Plane, Building2, ChevronRight, ArrowRight } from 'lucide-react';
 import { INDUSTRY_IMAGES } from '../src/constants/images';
 
 const industries: Industry[] = [
