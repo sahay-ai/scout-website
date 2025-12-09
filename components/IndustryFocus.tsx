@@ -86,10 +86,10 @@ const IndustryFocus: React.FC = () => {
                         ))}
                     </div>
 
-                    <div className="flex items-center text-scout-primary font-bold text-sm group-hover:translate-x-2 transition-transform cursor-pointer">
+                    <a href="mailto:contact@scoutrobo.com?subject=Industry Solutions Inquiry" className="flex items-center text-scout-primary font-bold text-sm group-hover:translate-x-2 transition-transform cursor-pointer">
                         <span>VIEW SOLUTIONS</span>
-                        <ChevronRight className="w-4 h-4" />
-                    </div>
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
                 </div>
             </div>
           ))}

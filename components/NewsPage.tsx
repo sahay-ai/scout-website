@@ -141,9 +141,9 @@ const NewsPage: React.FC<NewsPageProps> = ({ onNavigate }) => {
                                 {article.excerpt}
                             </p>
                             
-                            <div className="text-scout-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="mailto:contact@scoutrobo.com?subject=News Article Inquiry" className="text-scout-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity block">
                                 Read More →
-                            </div>
+                            </a>
                         </article>
                     ))}
                 </div>

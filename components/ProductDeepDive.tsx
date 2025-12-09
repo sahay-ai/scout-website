@@ -47,8 +47,8 @@ const SystemArchitecture: React.FC = () => {
                             <Wifi className="w-6 h-6 text-amber-400" />
                         </div>
                         <h4 className="text-white font-bold text-lg mb-1">SPARK</h4>
-                        <div className="text-xs font-mono text-slate-400 mb-3"></div>
-                        <p className="text-slate-400 text-sm mb-4">Real time small inspection unit.Mounts anywhere in 5 mins.</p>
+                        <div className="text-xs font-mono text-slate-400 mb-3">VISION</div>
+                        <p className="text-slate-400 text-sm mb-4">Real time small inspection unit. Mounts anywhere in 5 mins.</p>
                     </div>
                     <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
                         <img src={PRODUCT_IMAGES.SPARK} alt="SPARK Hardware" className="w-full h-32 object-contain" />
@@ -139,68 +139,133 @@ const SystemArchitecture: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-scout-primary/10 to-transparent"></div>
             
             {/* Connection Flow Diagram */}
-            <div className="relative w-full max-w-4xl flex items-center justify-between gap-8">
-                {/* Scout Pod */}
-                <div className="flex flex-col items-center relative z-10">
-                    <div className="w-24 h-24 bg-blue-500/20 rounded-xl border-2 border-blue-500 flex items-center justify-center mb-2 shadow-lg shadow-blue-500/20">
-                        <Settings className="w-12 h-12 text-blue-400" />
+            <div className="relative w-full max-w-5xl flex flex-col gap-8">
+                {/* Top Row: Flow Diagram */}
+                <div className="flex items-center justify-between gap-6">
+                    {/* Scout Pod */}
+                    <div className="flex flex-col items-center relative z-10">
+                        <div className="w-24 h-24 bg-blue-500/20 rounded-xl border-2 border-blue-500 flex items-center justify-center mb-2 shadow-lg shadow-blue-500/20">
+                            <Settings className="w-12 h-12 text-blue-400" />
+                        </div>
+                        <div className="text-xs font-mono text-slate-400 text-center">Scout Pod</div>
+                        <div className="text-[10px] text-slate-600 mt-1">On Vehicle</div>
+                        <div className="text-[9px] text-blue-400 mt-2 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/30">Defect Detected</div>
                     </div>
-                    <div className="text-xs font-mono text-slate-400 text-center">Scout Pod</div>
-                    <div className="text-[10px] text-slate-600 mt-1">On Vehicle</div>
-                </div>
 
-                {/* Connection Line 1 */}
-                <div className="flex-1 flex items-center relative">
-                    <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 relative">
-                        <div className="absolute top-1/2 left-0 w-2 h-2 bg-blue-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                    {/* Connection Line 1 */}
+                    <div className="flex-1 flex items-center relative">
+                        <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 relative">
+                            <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-blue-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                        </div>
+                        <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">5G Upload</div>
+                        <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 text-[8px] font-mono text-slate-600 bg-[#0B1120] px-1">&lt;2sec</div>
                     </div>
-                    <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">5G/LTE</div>
-                </div>
 
-                {/* Cloud Dashboard */}
-                <div className="flex flex-col items-center relative z-10">
-                    <div className="w-24 h-24 bg-purple-500/20 rounded-xl border-2 border-purple-500 flex items-center justify-center mb-2 shadow-lg shadow-purple-500/20">
-                        <Cloud className="w-12 h-12 text-purple-400" />
+                    {/* Cloud Dashboard */}
+                    <div className="flex flex-col items-center relative z-10">
+                        <div className="w-24 h-24 bg-purple-500/20 rounded-xl border-2 border-purple-500 flex items-center justify-center mb-2 shadow-lg shadow-purple-500/20">
+                            <Cloud className="w-12 h-12 text-purple-400" />
+                        </div>
+                        <div className="text-xs font-mono text-slate-400 text-center">Cloud AI</div>
+                        <div className="text-[10px] text-slate-600 mt-1">Processing</div>
+                        <div className="text-[9px] text-purple-400 mt-2 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/30">Severity: High</div>
                     </div>
-                    <div className="text-xs font-mono text-slate-400 text-center">Cloud</div>
-                    <div className="text-[10px] text-slate-600 mt-1">Analytics</div>
-                </div>
 
-                {/* Connection Line 2 */}
-                <div className="flex-1 flex items-center relative">
-                    <div className="w-full h-0.5 bg-gradient-to-r from-purple-500 to-green-500 relative">
-                        <div className="absolute top-1/2 right-0 w-2 h-2 bg-green-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                    {/* Connection Line 2 */}
+                    <div className="flex-1 flex items-center relative">
+                        <div className="w-full h-0.5 bg-gradient-to-r from-purple-500 to-green-500 relative">
+                            <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-green-500 rounded-full -translate-y-1/2 animate-ping"></div>
+                        </div>
+                        <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">Push Alert</div>
+                        <div className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 text-[8px] font-mono text-slate-600 bg-[#0B1120] px-1">Instant</div>
                     </div>
-                    <div className="absolute top-[-20px] left-1/2 -translate-x-1/2 text-[10px] font-mono text-slate-500 bg-[#0B1120] px-2">Push Alert</div>
-                </div>
 
-                {/* Mobile App */}
-                <div className="flex flex-col items-center relative z-10">
-                    <div className="relative w-20 h-[120px] bg-black rounded-[1rem] border-2 border-green-500 shadow-2xl shadow-green-500/20 overflow-hidden">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-2 bg-slate-800 rounded-b-lg z-20"></div>
-                        <div className="pt-4 px-2 h-full bg-gradient-to-b from-slate-900 to-black">
-                            <div className="bg-red-500/20 border border-red-500 rounded p-1 mb-1">
-                                <div className="text-[6px] text-red-400 font-bold mb-0.5">CRITICAL</div>
-                                <div className="text-[7px] text-white">Track Buckle</div>
+                    {/* Mobile App */}
+                    <div className="flex flex-col items-center relative z-10">
+                        <div className="relative w-20 h-[120px] bg-black rounded-[1rem] border-2 border-green-500 shadow-2xl shadow-green-500/20 overflow-hidden">
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-2 bg-slate-800 rounded-b-lg z-20"></div>
+                            <div className="pt-4 px-2 h-full bg-gradient-to-b from-slate-900 to-black">
+                                <div className="bg-red-500/20 border border-red-500 rounded p-1 mb-1 animate-pulse">
+                                    <div className="text-[6px] text-red-400 font-bold mb-0.5">🔴 CRITICAL</div>
+                                    <div className="text-[7px] text-white">Track Buckle</div>
+                                </div>
+                                <div className="bg-orange-500/20 border border-orange-500 rounded p-1 mb-1">
+                                    <div className="text-[6px] text-orange-400 font-bold mb-0.5">⚠️ WARN</div>
+                                    <div className="text-[7px] text-white">Switch Wear</div>
+                                </div>
+                                <div className="bg-slate-800 rounded p-1 mb-1">
+                                    <div className="text-[6px] text-slate-400">✓ TASK</div>
+                                    <div className="text-[7px] text-white">Verify MP 102</div>
+                                </div>
                             </div>
-                            <div className="bg-slate-800 rounded p-1 mb-1">
-                                <div className="text-[6px] text-slate-400">TASK</div>
-                                <div className="text-[7px] text-white">Verify MP 102</div>
+                        </div>
+                        <div className="text-xs font-mono text-slate-400 text-center mt-2">Mobile App</div>
+                        <div className="text-[10px] text-slate-600 mt-1">Field Crew</div>
+                    </div>
+                </div>
+
+                {/* Bottom Row: Info Cards */}
+                <div className="grid grid-cols-3 gap-4">
+                    {/* Alert Types */}
+                    <div className="bg-black/40 backdrop-blur border border-white/10 rounded-lg p-4">
+                        <div className="text-[10px] font-mono text-scout-primary mb-3 uppercase tracking-wider">Alert Priority</div>
+                        <div className="space-y-2">
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Critical</span>
+                                <span className="text-red-400 font-bold">&lt;30 sec</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Warning</span>
+                                <span className="text-orange-400 font-bold">&lt;2 min</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Info</span>
+                                <span className="text-blue-400 font-bold">Next shift</span>
                             </div>
                         </div>
                     </div>
-                    <div className="text-xs font-mono text-slate-400 text-center mt-2">Mobile App</div>
-                    <div className="text-[10px] text-slate-600 mt-1">Field Crew</div>
+
+                    {/* Response Metrics */}
+                    <div className="bg-black/40 backdrop-blur border border-white/10 rounded-lg p-4">
+                        <div className="text-[10px] font-mono text-scout-primary mb-3 uppercase tracking-wider">Avg Response</div>
+                        <div className="space-y-2">
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Detection → Alert</span>
+                                <span className="text-green-400 font-bold">2.3 sec</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Alert → Ack</span>
+                                <span className="text-green-400 font-bold">4.1 min</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Ack → Resolved</span>
+                                <span className="text-green-400 font-bold">18 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* System Status */}
+                    <div className="bg-black/40 backdrop-blur border border-white/10 rounded-lg p-4">
+                        <div className="text-[10px] font-mono text-scout-primary mb-3 uppercase tracking-wider flex items-center gap-2">
+                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            System Health
+                        </div>
+                        <div className="space-y-2">
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Uptime</span>
+                                <span className="text-green-400 font-bold">99.97%</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Active Pods</span>
+                                <span className="text-green-400 font-bold">142/143</span>
+                            </div>
+                            <div className="flex items-center justify-between text-[10px]">
+                                <span className="text-slate-400">Alerts Today</span>
+                                <span className="text-green-400 font-bold">37</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            {/* Data Flow Animation Indicators */}
-            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur border border-white/10 rounded-lg p-3">
-                <div className="flex items-center gap-2 mb-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-[10px] text-green-400 font-mono">SYSTEM ACTIVE</span>
-                </div>
-                <div className="text-[9px] text-slate-500 font-mono">Real-time sync enabled</div>
             </div>
         </div>
       )
@@ -263,9 +328,9 @@ const SystemArchitecture: React.FC = () => {
                    {activeStep === 3 && "Close the loop. Alerts are pushed to maintenance crews in real-time, complete with GPS location and defect imagery."}
                 </p>
                 <div className="mt-8">
-                     <button className="text-white text-sm font-bold flex items-center gap-2 group">
+                     <a href="mailto:contact@scoutrobo.com?subject=Product Inquiry" className="text-white text-sm font-bold flex items-center gap-2 group hover:text-scout-primary transition-colors">
                         LEARN MORE <span className="text-scout-primary group-hover:translate-x-1 transition-transform">→</span>
-                     </button>
+                     </a>
                 </div>
             </div>
 

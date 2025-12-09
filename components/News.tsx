@@ -89,9 +89,9 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
                 {item.excerpt}
               </p>
               
-              <div className="flex items-center gap-2 text-scout-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0">
+              <a href="mailto:contact@scoutrobo.com?subject=News Article Inquiry" className="flex items-center gap-2 text-scout-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0">
                 Read More <ArrowRight className="w-4 h-4" />
-              </div>
+              </a>
             </div>
           ))}
         </div>
