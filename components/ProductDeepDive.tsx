@@ -22,7 +22,7 @@ const SystemArchitecture: React.FC = () => {
                         </div>
                         <h4 className="text-white font-bold text-lg mb-1">LARRE</h4>
                         <div className="text-xs font-mono text-slate-400 mb-3">LIDAR + VISION</div>
-                        <p className="text-slate-400 text-sm mb-4">High-fidelity geometry and visual inspection unit. Mounts on bumpers or undercarriages.</p>
+                        <p className="text-slate-400 text-sm mb-4">High-fidelity visual inspection unit. Mounts front facing on the body.</p>
                     </div>
                     <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
                         <img src={PRODUCT_IMAGES.LARRE} alt="LARRE Hardware" className="w-full h-32 object-contain" />
@@ -34,8 +34,8 @@ const SystemArchitecture: React.FC = () => {
                             <Cpu className="w-6 h-6 text-purple-400" />
                         </div>
                         <h4 className="text-white font-bold text-lg mb-1">FORGE</h4>
-                        <div className="text-xs font-mono text-slate-400 mb-3">EDGE COMPUTE</div>
-                        <p className="text-slate-400 text-sm mb-4">Ruggedized AI processing core. Analyzes terabytes of sensor data in real-time.</p>
+                        <div className="text-xs font-mono text-slate-400 mb-3">VISION + LASER</div>
+                        <p className="text-slate-400 text-sm mb-4">High-frequency Track Geometry unit. Mounts underneath the body.</p>
                     </div>
                     <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
                         <img src={PRODUCT_IMAGES.FORGE} alt="FORGE Hardware" className="w-full h-32 object-contain" />
@@ -47,8 +47,8 @@ const SystemArchitecture: React.FC = () => {
                             <Wifi className="w-6 h-6 text-amber-400" />
                         </div>
                         <h4 className="text-white font-bold text-lg mb-1">SPARK</h4>
-                        <div className="text-xs font-mono text-slate-400 mb-3">CONNECTIVITY</div>
-                        <p className="text-slate-400 text-sm mb-4">Multi-modem gateway ensures data upload via 5G/LTE/Satellite seamlessly.</p>
+                        <div className="text-xs font-mono text-slate-400 mb-3"></div>
+                        <p className="text-slate-400 text-sm mb-4">Real time small inspection unit.Mounts anywhere in 5 mins.</p>
                     </div>
                     <div className="mt-auto bg-black/60 rounded-lg p-3 border border-white/5">
                         <img src={PRODUCT_IMAGES.SPARK} alt="SPARK Hardware" className="w-full h-32 object-contain" />
