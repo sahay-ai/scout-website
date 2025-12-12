@@ -137,6 +137,23 @@ export const AboutUs: React.FC = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Investors Section */}
+            <div className="container mx-auto px-6 py-24 border-t border-white/5">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-white mb-4">Our Investors</h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto">
+                        Backed by visionary investors who believe in the future of autonomous infrastructure.
+                    </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-12 items-center">
+                    <div className="text-2xl font-bold font-mono text-white opacity-60 hover:opacity-100 transition-opacity">Mana<span className="font-light">Ventures</span></div>
+                    <div className="text-2xl font-bold font-mono text-white opacity-60 hover:opacity-100 transition-opacity">Blue<span className="font-light">Collective</span></div>
+                    <div className="text-2xl font-bold font-mono text-white opacity-60 hover:opacity-100 transition-opacity">Anorak<span className="font-light">Ventures</span></div>
+                    <div className="text-2xl font-bold font-mono text-white opacity-60 hover:opacity-100 transition-opacity">Unshackled<span className="font-light">Ventures</span></div>
+                </div>
+            </div>
         </div>
     );
 };

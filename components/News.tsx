@@ -88,10 +88,6 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 {item.excerpt}
               </p>
-              
-              <a href="mailto:contact@scoutrobo.com?subject=News Article Inquiry" className="flex items-center gap-2 text-scout-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0">
-                Read More <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
           ))}
         </div>
@@ -103,6 +99,13 @@ const News: React.FC<NewsProps> = ({ onNavigate }) => {
             >
               VIEW ALL NEWS <ArrowRight className="w-4 h-4" />
            </button>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-slate-400 text-sm mb-4">For press releases, media inquiries, or more information:</p>
+          <a href="mailto:contact@scoutrobo.com?subject=Press and Media Inquiry" className="inline-flex items-center gap-2 text-scout-primary font-bold hover:underline">
+            Contact us for Press or Media inquiries <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

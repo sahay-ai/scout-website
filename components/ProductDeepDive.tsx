@@ -329,7 +329,7 @@ const SystemArchitecture: React.FC = () => {
                 </p>
                 <div className="mt-8">
                      <a href="mailto:contact@scoutrobo.com?subject=Product Inquiry" className="text-white text-sm font-bold flex items-center gap-2 group hover:text-scout-primary transition-colors">
-                        LEARN MORE <span className="text-scout-primary group-hover:translate-x-1 transition-transform">→</span>
+                        CONTACT US <span className="text-scout-primary group-hover:translate-x-1 transition-transform">→</span>
                      </a>
                 </div>
             </div>

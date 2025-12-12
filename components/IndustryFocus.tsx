@@ -87,7 +87,7 @@ const IndustryFocus: React.FC = () => {
                     </div>
 
                     <a href="mailto:contact@scoutrobo.com?subject=Industry Solutions Inquiry" className="flex items-center text-scout-primary font-bold text-sm group-hover:translate-x-2 transition-transform cursor-pointer">
-                        <span>VIEW SOLUTIONS</span>
+                        <span>CONTACT US FOR SOLUTIONS</span>
                         <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                 </div>

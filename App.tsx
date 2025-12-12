@@ -51,19 +51,6 @@ function App() {
           <>
             <Hero />
             
-            {/* Trusted By Section */}
-            <section className="py-8 border-b border-white/5 bg-black">
-              <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-                <p className="text-[10px] font-mono font-semibold tracking-widest text-slate-600 uppercase">Our Investors</p>
-                <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
-                   <div className="text-lg font-bold font-mono">Mana<span className="font-light">Ventures</span></div>
-                   <div className="text-lg font-bold font-mono">Blue<span className="font-light">Collective</span></div>
-                   <div className="text-lg font-bold font-mono">Anorak<span className="font-light">Ventures</span></div>
-                   <div className="text-lg font-bold font-mono">Unshackled<span className="font-light">Ventures</span></div>
-                </div>
-              </div>
-            </section>
-
             <ProblemSolution />
             <Technology />
             <IndustryFocus />
